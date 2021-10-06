@@ -4,4 +4,18 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public record Transaction(LocalDateTime effectiveDate, BigDecimal numberOfBitcoins) {
+
+    public Transaction(LocalDateTime effectiveDate, BigDecimal numberOfBitcoins){
+        this.effectiveDate = effectiveDate;
+        this.numberOfBitcoins = numberOfBitcoins;
+    }
+
+    public LocalDateTime getEffectiveDate(){
+        return effectiveDate;
+    }
+
+    public BigDecimal getNumberOfBitcoins(){
+        return numberOfBitcoins;
+    }
+
 }
